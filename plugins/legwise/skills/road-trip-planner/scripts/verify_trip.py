@@ -15,6 +15,7 @@ See references/plan-format.md for the file format.
 import argparse
 import json
 import math
+import re
 import sys
 from datetime import date, datetime, timedelta, timezone
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
@@ -33,7 +34,11 @@ DEFAULT_RULES = {
     "claimed_km_tolerance_pct": 10,
     "min_plausible_kmh": 65,
     "book_by_warn_days": 7,
+    "departure_day_max_drive_min": 90,
+    "unknown_hours_window": ["09:00", "17:00"],
 }
+UNNAMED_STAY = re.compile(r"\b(tbd|tba|to choose|to be (chosen|decided|confirmed)|any|anything|"
+                          r"options?|or similar)\b|\?", re.I)
 SCHEDULED_KINDS = {"visit", "fuel", "meal"}
 BOOKING_RULES = {"none", "walk_up", "recommended", "required"}
 
@@ -99,6 +104,7 @@ class Checker:
         self.check_fuel()
         self.check_breaks()
         self.check_stays()
+        self.check_departure_day()
         self.check_entry_rules()
         self.check_facts()
         self.check_bookings()
@@ -263,8 +269,17 @@ class Checker:
         if stop.get("kind") not in SCHEDULED_KINDS and hours is None:
             return arrival + dwell
         if hours is None:
-            self.add(UNKNOWN, "hours", where, "opening hours not confirmed")
-            return arrival + dwell
+            leave = arrival + dwell
+            message = "opening hours not confirmed"
+            if stop.get("kind") == "visit":
+                local, end = arrival.astimezone(tz), leave.astimezone(tz)
+                early, late = self.rules["unknown_hours_window"]
+                if local.strftime("%H:%M") < early or end.strftime("%H:%M") > late:
+                    message += (f", and the visit ({local.strftime('%H:%M')}–"
+                                f"{end.strftime('%H:%M')}) is outside the usual {early}–{late}: "
+                                "confirm the opening time or move the visit")
+            self.add(UNKNOWN, "hours", where, message)
+            return leave
         if hours == "always":
             return arrival + dwell
         if not (isinstance(hours, list) and len(hours) == 2):
@@ -347,6 +362,11 @@ class Checker:
                 self.add(WARN, "booking", where,
                          f"{stay.get('name')}: {status}, "
                          f"{(start - self.today).days} days before the trip starts")
+            name = stay.get("name") or ""
+            if not name.strip() or UNNAMED_STAY.search(name):
+                self.add(UNKNOWN, "stay_name", where,
+                         f"no specific lodging named ({name or 'blank'}): name one or two real "
+                         "places from a source")
             if not stay.get("source") and status != "booked":
                 self.add(UNKNOWN, "grounding", where,
                          f"{stay.get('name')}: existence not confirmed by a source")
@@ -366,6 +386,30 @@ class Checker:
                 if local > local.replace(hour=hour, minute=minute, second=0, microsecond=0):
                     self.add(FAIL, "check_in", where,
                              f"arrives {local.strftime('%H:%M')}, check-in closes {until}")
+
+        sources = {}
+        for day_no, day in enumerate(days, 1):
+            stay = day.get("stay") or {}
+            if stay.get("source", "").startswith("http"):
+                sources.setdefault(stay["source"], set()).add(stay.get("name"))
+        for url, names in sources.items():
+            if len(names) > 1:
+                self.add(WARN, "grounding", "stays",
+                         f"{', '.join(sorted(n or '?' for n in names))} share one source link "
+                         f"({url}); give each lodging its own page")
+
+    def check_departure_day(self):
+        """The night before a flight should be close to the airport."""
+        last = self.plan["days"][-1]
+        if last["stops"][-1].get("kind") != "airport":
+            return
+        minutes = self.days[-1]["drive_min"]
+        limit = self.rules["departure_day_max_drive_min"]
+        if minutes > limit:
+            self.add(WARN, "departure_day", f"D{len(self.plan['days'])}",
+                     f"{minutes:.0f} min of driving on the day you fly (more than {limit}); "
+                     "sleep closer to the airport the night before unless the traveller "
+                     "agreed to this")
 
     def check_entry_rules(self):
         booked = {b.get("place") for b in self.plan.get("bookings") or []}

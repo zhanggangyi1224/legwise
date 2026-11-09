@@ -57,6 +57,8 @@ A plan is one JSON file. `scripts/verify_trip.py` reads it and `scripts/route_le
 | `claimed_km_tolerance_pct` | 10 | Warns if `claimed_km` differs from the routed total by more |
 | `min_plausible_kmh` | 65 | Warns if a leg of 100 km or more averages below this |
 | `book_by_warn_days` | 7 | Warns when an unbooked item's `book_by` is this close |
+| `departure_day_max_drive_min` | 90 | Warns when the last day, ending at an `airport` stop, has more driving than this |
+| `unknown_hours_window` | ["09:00", "17:00"] | A visit with unconfirmed hours outside this window is called out in its UNKNOWN finding |
 
 **`places`** maps an id to `name`, `tz`, and `lat`/`lon`. `tz` must be an IANA zone name and is required. Use `query` to give the geocoder a precise search string. In remote areas, name the roadhouse or business rather than the locality, because a locality's map point can sit away from the highway.
 

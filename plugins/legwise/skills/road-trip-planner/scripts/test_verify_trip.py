@@ -303,6 +303,51 @@ class EntryRulesAndBrand(unittest.TestCase):
         plan["days"][0]["stay"]["brand_note"] = "no IHG within 30 km; checked trip_v2_ihg.json"
         self.assertEqual(self.levels(plan, "brand"), [])
 
+
+class TestFindings(unittest.TestCase):
+    """Problems a blind grader found in a test trip."""
+
+    def findings(self, plan, check):
+        return [f for f in run(plan)["findings"] if f["check"] == check]
+
+    def test_long_drive_on_flight_day_warns(self):
+        plan = clean_plan()  # day 2 drives 115 min to the airport
+        self.assertEqual([f["level"] for f in self.findings(plan, "departure_day")], [vt.WARN])
+        plan["rules"] = {"departure_day_max_drive_min": 150}
+        self.assertEqual(self.findings(plan, "departure_day"), [])
+
+    def test_no_flight_no_departure_check(self):
+        plan = clean_plan()
+        plan["days"][1]["stops"][1]["kind"] = "overnight"
+        self.assertEqual(self.findings(plan, "departure_day"), [])
+
+    def test_unnamed_stay_is_unknown(self):
+        plan = clean_plan()
+        plan["days"][0]["stay"]["name"] = "Motel or apartment (to choose)"
+        self.assertEqual([f["level"] for f in self.findings(plan, "stay_name")], [vt.UNKNOWN])
+        plan["days"][0]["stay"]["name"] = "Seaview Motel"
+        self.assertEqual(self.findings(plan, "stay_name"), [])
+
+    def test_stays_sharing_a_link_warn(self):
+        plan = clean_plan()
+        plan["days"].insert(1, json.loads(json.dumps(plan["days"][0])))
+        plan["days"][1]["date"] = "2026-11-11"
+        plan["days"][1]["stops"] = [{"place": "b", "kind": "start"},
+                                    {"place": "b", "kind": "overnight"}]
+        plan["days"][2]["date"] = "2026-11-12"
+        for n, day in enumerate(plan["days"][:2]):
+            day["stay"].update(name=f"Hotel {n}", source="https://example.com/brand-search")
+        self.assertIn("share one source link",
+                      " ".join(f["message"] for f in self.findings(plan, "grounding")))
+
+    def test_early_visit_with_unknown_hours_is_called_out(self):
+        plan = clean_plan()
+        plan["days"][1]["stops"].insert(1, {"place": "b", "kind": "visit", "dwell_min": 30,
+                                            "leg": {"km": 1, "drive_min": 2, "source": "x"}})
+        message = " ".join(f["message"] for f in self.findings(plan, "hours"))
+        self.assertIn("outside the usual 09:00–17:00", message)  # visit starts about 08:02
+
+
 class Gate(unittest.TestCase):
     def test_rejects_new_failure(self):
         old = run(clean_plan())
