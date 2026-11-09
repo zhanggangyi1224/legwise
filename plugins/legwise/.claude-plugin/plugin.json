@@ -1,7 +1,7 @@
 {
   "name": "legwise",
   "displayName": "Legwise",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Plan, check and repair multi-day road trips: multiple-choice intake, real road distances, a deterministic checker (sunset, fuel, opening hours, bookings), overnight and visit-order optimisation, and a fixed-format report in PDF, HTML or Markdown.",
   "author": {
     "name": "Gangyi Zhang",

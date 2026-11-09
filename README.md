@@ -58,7 +58,7 @@ git clone https://github.com/zhanggangyi1224/legwise.git
 cp -r legwise/plugins/legwise/skills/road-trip-planner ~/.claude/skills/
 ```
 
-**On claude.ai:** download `road-trip-planner-skill-v1.0.0.zip` from [Releases](https://github.com/zhanggangyi1224/legwise/releases/latest) and upload it as a custom skill in Settings. Routing needs network access, which the claude.ai sandbox may block (see [Limits](#limits)).
+**On claude.ai:** download `road-trip-planner-skill-v1.1.0.zip` from [Releases](https://github.com/zhanggangyi1224/legwise/releases/latest) and upload it as a custom skill in Settings. Routing needs network access, which the claude.ai sandbox may block (see [Limits](#limits)).
 
 The scripts need only Python 3.9+ and the standard library. PDF output also needs `reportlab` (`pip install reportlab`).
 

@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.1.0 (2026-11-09)
+
+Fixes for the weaknesses the blind evaluation found.
+
+- Every night names a real lodging with its own source. The checker flags a stay left as "to choose" and two stays sharing one link.
+- The checker warns when a flight day has more than 90 minutes of driving (`departure_day_max_drive_min`), and `choose_nights.py` ranks such arrangements lower.
+- `choose_nights.py` lists the towns with no brand-hotel candidate, so a brand hotel in the start or end city isn't missed.
+- A visit with unconfirmed hours scheduled before 09:00 or after 17:00 is called out (`unknown_hours_window`).
+- PDF reports keep each day together instead of starting every day on a new page, so they are shorter with less white space.
+- The requirement summary reads "Requirements: 7 met, 3 to confirm, 0 not met".
+- A detailed report gives each main stop two to four sentences.
+- Phone-layout lines label their numbers ("78 km · Driving 1 h 07 · Sunset 20:45").
+- The example trip names every night's lodging.
+- Evaluation re-run with this version: both road-trip-planner runs repeated and all submissions graded again.
+
 ## 1.0.0 (2026-11-09)
 
 First public release of Legwise, the Claude Code plugin that packages the `road-trip-planner` skill.

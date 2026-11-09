@@ -9,7 +9,7 @@
       "name": "legwise",
       "source": "./plugins/legwise",
       "description": "Plan, check and repair multi-day road trips with a deterministic checker and a fixed-format report.",
-      "version": "1.0.0"
+      "version": "1.1.0"
     }
   ]
 }
