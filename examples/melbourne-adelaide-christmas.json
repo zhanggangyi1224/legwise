@@ -612,11 +612,11 @@
         }
       ],
       "stay": {
-        "name": "Port Campbell, to choose",
+        "name": "Port Campbell Motor Inn (family room, 1 queen + 3 singles)",
         "place": "pca",
         "brand": null,
         "status": "unbooked",
-        "source": "visit12apostles.com.au",
+        "source": "https://au.hotels.com/ho403643/port-campbell-motor-inn-port-campbell-australia",
         "brand_note": "IHG has no hotel on the coast between Geelong and Adelaide (former Crowne Plaza Torquay is now Wyndham); choose_nights.py found 2 IHG nights is the most that fits 350 km / 4 h a day",
         "book_by": "2026-11-16",
         "cancel": "free cancellation, ≤A$350, 2 queens/family room"
@@ -739,11 +739,11 @@
         }
       ],
       "stay": {
-        "name": "Portland, to choose (with kitchen)",
+        "name": "Victoria Lodge Motor Inn & Apartments, Portland (2-bedroom apartment with kitchen)",
         "place": "por",
         "brand": null,
         "status": "unbooked",
-        "source": "visitgreatoceanroad.org.au",
+        "source": "https://www.booking.com/hotel/au/victoria-lodge-motor-inn.html",
         "brand_note": "IHG has no hotel on the coast between Geelong and Adelaide (former Crowne Plaza Torquay is now Wyndham); choose_nights.py found 2 IHG nights is the most that fits 350 km / 4 h a day",
         "book_by": "2026-11-16",
         "cancel": "free cancellation, ≤A$350, 2 queens/family room"
@@ -811,14 +811,15 @@
         }
       ],
       "stay": {
-        "name": "Kingston SE, to choose",
+        "name": "Kingston Ocean View Motel",
         "place": "kin",
         "brand": null,
         "status": "unbooked",
-        "source": "southaustralia.com",
+        "source": "https://www.expedia.com.au/Kingston-SE-Hotels-Kingston-Ocean-View-Motel.h127193868.Hotel-Information",
         "brand_note": "IHG has no hotel on the coast between Geelong and Adelaide (former Crowne Plaza Torquay is now Wyndham); choose_nights.py found 2 IHG nights is the most that fits 350 km / 4 h a day",
         "book_by": "2026-11-16",
-        "cancel": "free cancellation, ≤A$350, 2 queens/family room"
+        "cancel": "free cancellation, ≤A$350, 2 queens/family room",
+        "check_in_until": "18:00"
       },
       "title": "Boxing Day: into South Australia"
     },
