@@ -44,6 +44,11 @@ class Report(unittest.TestCase):
         self.assertIn("Lieu B B", rr.to_markdown(blocks(plan, lang="fr")))
         self.assertNotIn("Lieu B", rr.to_markdown(blocks(plan)))
 
+    def test_phone_overview_lines_are_labelled(self):
+        md = rr.to_markdown(blocks(clean_plan()), "phone")
+        self.assertRegex(md, r"\*\*Day 1 · [^*]+\*\* A → B · 300 km · Driving 1 h 50 · Sunset \d\d:\d\d")
+        self.assertIn("**10:01** B · 300 km 1 h 50", md)
+
     def test_brief_drops_long_notes(self):
         plan = clean_plan()
         plan["days"][0]["stops"][1]["note"] = "LONGNOTE"
@@ -132,7 +137,7 @@ class Report(unittest.TestCase):
 
     def test_brief_keeps_only_open_requirements(self):
         md = rr.to_markdown(blocks(clean_plan(), detail="brief", sections=["issues"]))
-        self.assertIn("2 of 2 requirements met", md)
+        self.assertIn("Requirements: 2 met, 0 to confirm, 0 not met", md)
         self.assertNotIn("[met]", md)
 
     def test_full_falls_back_to_short(self):

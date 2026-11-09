@@ -41,7 +41,7 @@ TEXT = {
         "leg": "Drive here", "notes": "Notes", "depart": "depart", "item": "Item",
         "status": "Status", "ref": "Ref", "book_by": "Book by", "terms": "Terms / notes",
         "hotel": "Hotel", "brand": "Brand", "room": "Room", "cost": "Cost",
-        "tips": "Tips", "met_count": "{met} of {n} requirements met", "checklist": "Checklist", "packing": "Packing",
+        "tips": "Tips", "met_count": "Requirements: {met} met, {unknown} to confirm, {failed} not met", "checklist": "Checklist", "packing": "Packing",
         "requirements": "Your requirements", "met": "met", "not_met": "NOT met",
         "to_confirm": "to confirm", "must_fix": "Must fix", "confirm": "To confirm",
         "note": "Worth knowing", "plans": "Backup plans", "decide_by": "decide by", "none": "Nothing open.", "not_ready": "Not prepared yet.",
@@ -66,7 +66,8 @@ CHECKS = {
            "lodging": "Lodging", "continuity": "Days don't connect", "dates": "Dates",
            "claimed_km": "Distance differs from source", "leg_speed": "Suspicious drive time",
            "book_by": "Book-by date", "constraints": "Requirements",
-           "booking_rule": "Booking or timed entry not checked", "brand": "Non-brand night, reason missing"},
+           "booking_rule": "Booking or timed entry not checked", "brand": "Non-brand night, reason missing",
+           "departure_day": "Long drive on the day you fly", "stay_name": "Lodging not named"},
 }
 
 
@@ -199,8 +200,6 @@ def build(plan, result, opts):
             blocks.append(("break",))
         blocks.append(("h2", t["days"]))
         for i, (d, s) in enumerate(zip(days, summaries), 1):
-            if i > 1:
-                blocks.append(("break",))
             head = day_head(i, d)
             if d.get("title"):
                 head += " · " + d["title"]
@@ -282,8 +281,9 @@ def build(plan, result, opts):
             shown = cons if full else [c for c in cons if c["status"] != "PASS"]
             lines = [f"[{mark[c['status']]}] {c['nl']}" for c in shown]
             if not full:
-                met = sum(c["status"] == "PASS" for c in cons)
-                lines.insert(0, t["met_count"].format(met=met, n=len(cons)))
+                count = {s: sum(c["status"] == s for c in cons) for s in ("PASS", "UNKNOWN", "FAIL")}
+                lines.insert(0, t["met_count"].format(met=count["PASS"], unknown=count["UNKNOWN"],
+                                                      failed=count["FAIL"]))
             blocks.append(("bullets", lines))
         plans = plan.get("contingencies") or []
         if plans:
@@ -346,6 +346,14 @@ def build(plan, result, opts):
     return blocks
 
 
+def phone_cell(head, value):
+    """A table cell on its own: short numbers get their column name, so "60" reads "60 km"."""
+    text = str(value).replace("\n", " ")
+    if len(text) > 12 or not re.search(r"\d", text) or head.lower() in text.lower():
+        return text
+    return f"{text} {head}" if head.lower() == "km" else f"{head} {text}"
+
+
 def to_markdown(blocks, layout="print"):
     """layout "phone" turns every table into a list, so nothing scrolls sideways."""
     out = []
@@ -360,7 +368,8 @@ def to_markdown(blocks, layout="print"):
         elif kind == "table" and layout == "phone":
             rows = []
             for r in b[2]:
-                rest = [str(x).replace("\n", " ") for x in r[1:] if str(x).strip()]
+                rest = [phone_cell(head, x) for head, x in zip(b[1][1:], r[1:])
+                        if str(x).strip() not in ("", "—", "--")]
                 rows.append(f"- **{r[0]}** " + " · ".join(rest) if r[0] else "- " + " · ".join(rest))
             out.append("\n".join(rows))
         elif kind == "table":
@@ -385,7 +394,7 @@ padding-bottom:4px;margin-top:2em}h3{background:var(--band);padding:8px 10px;bor
 h4{margin:1.2em 0 .3em}.t{overflow-x:auto}table{border-collapse:collapse;width:100%;margin:.6em 0}
 th,td{border:1px solid var(--line);padding:5px 7px;text-align:left;vertical-align:top}
 th{background:var(--band)}td{white-space:pre-line}p{margin:.4em 0}
-@media print{h3{break-before:page}body{max-width:none}}
+@media print{h3{break-after:avoid}tr{break-inside:avoid}body{max-width:none}}
 """
 
 
@@ -456,8 +465,8 @@ def to_pdf(blocks, path, title, font=None):
     from reportlab.lib.pagesizes import A4
     from reportlab.lib.styles import ParagraphStyle
     from reportlab.lib.units import mm
-    from reportlab.platypus import (PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table,
-                                    TableStyle)
+    from reportlab.platypus import (KeepTogether, PageBreak, Paragraph, SimpleDocTemplate,
+                                    Spacer, Table, TableStyle)
     script = east_asian_script(json.dumps(blocks, ensure_ascii=False))
     regular, bold = register_font(script, font)
     wrap = "CJK" if script in ("han", "kana") else None
@@ -481,16 +490,29 @@ def to_pdf(blocks, path, title, font=None):
     def para(text, style):
         return Paragraph(html.escape(str(text)).replace("\n", "<br/>"), st[style])
 
-    story = []
+    story, day = [], None
+
+    def end_day():
+        # A day stays on one page when it fits; a longer one flows on.
+        nonlocal day
+        if day:
+            story.append(KeepTogether(day))
+        day = None
+
     for b in blocks:
         kind = b[0]
+        if kind in ("h1", "h2", "h3", "break"):
+            end_day()
+        if kind == "h3":
+            day = []
+        out = story if day is None else day
         if kind == "break":
             story.append(PageBreak())
         elif kind in ("h1", "h2", "h3", "h4", "p"):
-            story.append(para(b[1], kind))
+            out.append(para(b[1], kind))
         elif kind == "bullets":
             for x in b[1]:
-                story.append(Paragraph("• " + html.escape(str(x)), st["p"]))
+                out.append(Paragraph("• " + html.escape(str(x)), st["p"]))
         elif kind == "table":
             weights = b[3]
             cols = [width * w / sum(weights) for w in weights]
@@ -501,7 +523,8 @@ def to_pdf(blocks, path, title, font=None):
                 ("GRID", (0, 0), (-1, -1), 0.4, colors.HexColor("#c5ced8")),
                 ("VALIGN", (0, 0), (-1, -1), "TOP"),
                 ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, colors.HexColor("#f6f8fa")])]))
-            story += [table, Spacer(1, 5)]
+            out += [table, Spacer(1, 5)]
+    end_day()
 
     def footer(canvas, doc):
         canvas.setFont(regular, 7.5)
