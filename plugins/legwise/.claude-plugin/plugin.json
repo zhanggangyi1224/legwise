@@ -1,0 +1,25 @@
+{
+  "name": "legwise",
+  "displayName": "Legwise",
+  "version": "1.0.0",
+  "description": "Plan, check and repair multi-day road trips: multiple-choice intake, real road distances, a deterministic checker (sunset, fuel, opening hours, bookings), overnight and visit-order optimisation, and a fixed-format report in PDF, HTML or Markdown.",
+  "author": {
+    "name": "Gangyi Zhang",
+    "url": "https://github.com/zhanggangyi1224"
+  },
+  "homepage": "https://github.com/zhanggangyi1224/legwise#readme",
+  "repository": "https://github.com/zhanggangyi1224/legwise",
+  "license": "MIT",
+  "keywords": [
+    "travel",
+    "road-trip",
+    "itinerary",
+    "self-drive",
+    "planning"
+  ],
+  "icon": "./icon.png",
+  "documentationUrl": "https://github.com/zhanggangyi1224/legwise/blob/main/README.md",
+  "supportUrl": "https://github.com/zhanggangyi1224/legwise/issues",
+  "privacyPolicyUrl": "https://github.com/zhanggangyi1224/legwise/blob/main/PRIVACY.md",
+  "termsOfServiceUrl": "https://github.com/zhanggangyi1224/legwise/blob/main/LICENSE"
+}

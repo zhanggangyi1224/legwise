@@ -1,0 +1,15 @@
+{
+  "name": "legwise",
+  "owner": {
+    "name": "Gangyi Zhang"
+  },
+  "description": "Road trip planning skill with a deterministic checker.",
+  "plugins": [
+    {
+      "name": "legwise",
+      "source": "./plugins/legwise",
+      "description": "Plan, check and repair multi-day road trips with a deterministic checker and a fixed-format report.",
+      "version": "1.0.0"
+    }
+  ]
+}
