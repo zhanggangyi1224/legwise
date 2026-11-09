@@ -6,6 +6,8 @@
 
 Legwise is a Claude Code plugin that packages `road-trip-planner`, a Claude skill for planning, checking and repairing multi-day road trips. It asks the right questions first, builds the plan from real road data, and checks it with a deterministic script, not by eye. The final plan comes out in a fixed-format report.
 
+See [`examples/report-phone.md`](examples/report-phone.md) for a finished report.
+
 ## What it does
 
 - **Speaks your language.** It replies in the language you write in and writes the report in the language you pick.
@@ -73,7 +75,7 @@ python3 $S/verify_trip.py trip.json                # check the plan
 python3 $S/render_report.py trip.json --out trip.pdf --lang fr   # any language; see report.labels
 ```
 
-The plan file format is documented in `references/plan-format.md`.
+The plan file format is documented in `references/plan-format.md`. `examples/` has a complete plan for a fictional trip and its reports as phone Markdown and print PDF.
 
 ## Limits
 
@@ -93,6 +95,7 @@ plugins/legwise/
     SKILL.md                        the skill
     references/                     intake questions, plan format, bookings and prep
     scripts/                        routing, checker, optimisers, report renderer, tests
+examples/                           a fictional trip and its reports
 skills.sh.json                      tells the skills CLI where the skill is
 PRIVACY.md                          what the plugin stores and sends
 ```

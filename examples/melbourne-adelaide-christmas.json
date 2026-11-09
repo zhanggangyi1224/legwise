@@ -1,0 +1,1065 @@
+{
+  "trip": {
+    "name": "Melbourne to Adelaide by the Great Ocean Road, Christmas 2026",
+    "travellers": 3
+  },
+  "vehicle": {
+    "type": "One-way rental, mid-size car or SUV (2WD), child seat fitted",
+    "range_km": 600
+  },
+  "rules": {
+    "sunset_buffer_min": 60,
+    "no_drive_after_sunset": true,
+    "no_drive_before_sunrise": true
+  },
+  "preferences": {
+    "language": "en",
+    "output": "short phone-friendly Markdown",
+    "hotel_brands": [
+      "IHG"
+    ],
+    "brand_rule": "as many IHG nights as possible, otherwise anything clean",
+    "room": "one room for 3: family room or two queen beds",
+    "budget_per_night_aud": 350,
+    "pace": "relaxed, travelling with a 6-year-old",
+    "interests": [
+      "coastal lookouts",
+      "wildlife (koalas, kangaroos)",
+      "easy nature",
+      "things a 6-year-old enjoys"
+    ],
+    "avoid": [
+      "helicopter or scenic flights",
+      "walks over about 1 hour",
+      "unsealed roads (rental contract)"
+    ],
+    "drivers": 2,
+    "licences": "both full Australian",
+    "scope": "driving part only",
+    "christmas": "plan around what is actually open on 25 and 26 Dec"
+  },
+  "places": {
+    "mel": {
+      "name": "Melbourne Airport",
+      "query": "Melbourne Airport, Tullamarine, Victoria",
+      "tz": "Australia/Melbourne",
+      "lat": -37.7031162,
+      "lon": 144.8571109
+    },
+    "gee": {
+      "name": "Geelong waterfront",
+      "query": "Eastern Beach, Geelong, Victoria",
+      "tz": "Australia/Melbourne",
+      "tags": [],
+      "lat": -38.1462599,
+      "lon": 144.3683812
+    },
+    "tor": {
+      "name": "Torquay",
+      "query": "Torquay, Surf Coast Shire, Victoria",
+      "tz": "Australia/Melbourne",
+      "tags": [],
+      "lat": -38.3316,
+      "lon": 144.326
+    },
+    "bel": {
+      "name": "Bells Beach lookout",
+      "query": "Bells Beach, Victoria",
+      "tz": "Australia/Melbourne",
+      "tags": [],
+      "lat": -38.376708,
+      "lon": 144.2519506
+    },
+    "spl": {
+      "name": "Split Point Lighthouse, Aireys Inlet",
+      "query": "Split Point Lighthouse, Aireys Inlet",
+      "tz": "Australia/Melbourne",
+      "tags": [],
+      "lat": -38.4680026,
+      "lon": 144.104468
+    },
+    "arch": {
+      "name": "Great Ocean Road Memorial Arch, Eastern View",
+      "query": "Memorial Arch, Eastern View, Victoria",
+      "tz": "Australia/Melbourne",
+      "tags": [],
+      "lat": -38.4637,
+      "lon": 144.0403
+    },
+    "lor": {
+      "name": "Lorne",
+      "query": "Lorne, Victoria",
+      "tz": "Australia/Melbourne",
+      "tags": [],
+      "lat": -38.5411691,
+      "lon": 143.9748166
+    },
+    "ken": {
+      "name": "Kennett River koala spotting",
+      "query": "Kennett River, Victoria",
+      "tz": "Australia/Melbourne",
+      "tags": [
+        "wildlife"
+      ],
+      "lat": -38.6676956,
+      "lon": 143.85892
+    },
+    "apb": {
+      "name": "Apollo Bay",
+      "query": "Apollo Bay, Victoria",
+      "tz": "Australia/Melbourne",
+      "lat": -38.7547442,
+      "lon": 143.6691463,
+      "tags": []
+    },
+    "mai": {
+      "name": "Maits Rest rainforest walk",
+      "query": "Maits Rest, Great Otway National Park",
+      "tz": "Australia/Melbourne",
+      "tags": [],
+      "lat": -38.7553,
+      "lon": 143.5598
+    },
+    "gib": {
+      "name": "Gibson Steps",
+      "query": "Gibson Steps, Victoria",
+      "tz": "Australia/Melbourne",
+      "tags": [],
+      "lat": -38.6686286,
+      "lon": 143.1121047
+    },
+    "twa": {
+      "name": "Twelve Apostles Visitor Centre",
+      "query": "Twelve Apostles, Port Campbell National Park",
+      "tz": "Australia/Melbourne",
+      "tags": [],
+      "lat": -38.6654,
+      "lon": 143.1046
+    },
+    "lag": {
+      "name": "Loch Ard Gorge",
+      "query": "Loch Ard Gorge, Victoria",
+      "tz": "Australia/Melbourne",
+      "tags": [],
+      "lat": -38.6464071,
+      "lon": 143.0703269
+    },
+    "pca": {
+      "name": "Port Campbell",
+      "query": "Port Campbell, Victoria",
+      "tz": "Australia/Melbourne",
+      "lat": -38.6196293,
+      "lon": 142.995366,
+      "tags": []
+    },
+    "lob": {
+      "name": "London Bridge (London Arch)",
+      "query": "London Arch, Port Campbell National Park",
+      "tz": "Australia/Melbourne",
+      "tags": [],
+      "lat": -38.6215,
+      "lon": 142.9316
+    },
+    "boi": {
+      "name": "Bay of Islands lookout",
+      "query": "Bay of Islands Coastal Park, Peterborough, Victoria",
+      "tz": "Australia/Melbourne",
+      "tags": [],
+      "lat": -38.5192227,
+      "lon": 142.7197798
+    },
+    "war": {
+      "name": "Warrnambool",
+      "query": "Warrnambool, Victoria",
+      "tz": "Australia/Melbourne",
+      "lat": -38.3826242,
+      "lon": 142.4814199
+    },
+    "thl": {
+      "name": "Tower Hill Wildlife Reserve",
+      "query": "Tower Hill Wildlife Reserve, Victoria",
+      "tz": "Australia/Melbourne",
+      "tags": [
+        "wildlife"
+      ],
+      "lat": -38.3173723,
+      "lon": 142.361056
+    },
+    "pfy": {
+      "name": "Port Fairy",
+      "query": "Port Fairy, Victoria",
+      "tz": "Australia/Melbourne",
+      "lat": -38.3855117,
+      "lon": 142.2366722,
+      "tags": []
+    },
+    "por": {
+      "name": "Portland",
+      "query": "Portland, Victoria",
+      "tz": "Australia/Melbourne",
+      "lat": -38.3456231,
+      "lon": 141.6042304
+    },
+    "blu": {
+      "name": "Blue Lake, Mount Gambier",
+      "query": "Blue Lake, Mount Gambier, South Australia",
+      "tz": "Australia/Adelaide",
+      "tags": [],
+      "lat": -37.8471691,
+      "lon": 140.777702
+    },
+    "ump": {
+      "name": "Umpherston Sinkhole, Mount Gambier",
+      "query": "Umpherston Sinkhole, Mount Gambier",
+      "tz": "Australia/Adelaide",
+      "tags": [],
+      "lat": -37.8385384,
+      "lon": 140.8089469
+    },
+    "mtg": {
+      "name": "Mount Gambier",
+      "query": "Mount Gambier, South Australia",
+      "tz": "Australia/Adelaide",
+      "lat": -37.8301386,
+      "lon": 140.7842627
+    },
+    "rob": {
+      "name": "Robe",
+      "query": "Robe, South Australia",
+      "tz": "Australia/Adelaide",
+      "tags": [],
+      "lat": -37.1627,
+      "lon": 139.758
+    },
+    "kin": {
+      "name": "Kingston SE (Big Lobster)",
+      "query": "Kingston SE, South Australia",
+      "tz": "Australia/Adelaide",
+      "tags": [],
+      "lat": -36.8391699,
+      "lon": 139.8471033
+    },
+    "men": {
+      "name": "Meningie",
+      "query": "Meningie, South Australia",
+      "tz": "Australia/Adelaide",
+      "tags": [],
+      "lat": -35.6891286,
+      "lon": 139.3364722
+    },
+    "tai": {
+      "name": "Tailem Bend",
+      "query": "Tailem Bend, South Australia",
+      "tz": "Australia/Adelaide",
+      "lat": -35.2529335,
+      "lon": 139.4533779
+    },
+    "adl": {
+      "name": "Adelaide city centre",
+      "query": "Frome Street, Adelaide, South Australia",
+      "tz": "Australia/Adelaide",
+      "lat": -34.9246767,
+      "lon": 138.6080778
+    },
+    "cle": {
+      "name": "Cleland Wildlife Park",
+      "query": "Cleland Wildlife Park, Crafers, South Australia",
+      "tz": "Australia/Adelaide",
+      "tags": [
+        "wildlife"
+      ],
+      "lat": -34.9662553,
+      "lon": 138.6945231
+    },
+    "adla": {
+      "name": "Adelaide Airport (car return)",
+      "query": "Adelaide Airport, South Australia",
+      "tz": "Australia/Adelaide",
+      "lat": -34.946159,
+      "lon": 138.5307956
+    },
+    "gle": {
+      "name": "Glenelg beach (Moseley Square)",
+      "query": "Moseley Square, Glenelg, South Australia",
+      "tz": "Australia/Adelaide",
+      "tags": [],
+      "lat": -34.9803488,
+      "lon": 138.5116767
+    }
+  },
+  "hard_constraints": [
+    {
+      "id": "c1",
+      "nl": "At most 350 km in any day",
+      "type": "max_daily_km",
+      "params": {
+        "km": 350
+      }
+    },
+    {
+      "id": "c2",
+      "nl": "No more than about 4 hours of driving a day",
+      "type": "max_daily_drive_min",
+      "params": {
+        "minutes": 240
+      }
+    },
+    {
+      "id": "c3",
+      "nl": "Off the road at least 1 hour before sunset, no driving before sunrise (kangaroos)",
+      "type": "manual",
+      "confirmed": "Enforced by rules.sunset_buffer_min = 60 and no_drive_before_sunrise in the checker"
+    },
+    {
+      "id": "c4",
+      "nl": "No helicopter or scenic flights",
+      "type": "avoid_tag",
+      "params": {
+        "tag": "scenic_flight"
+      }
+    },
+    {
+      "id": "c5",
+      "nl": "No walks over about 1 hour",
+      "type": "avoid_tag",
+      "params": {
+        "tag": "long_walk"
+      }
+    },
+    {
+      "id": "c6",
+      "nl": "No unsealed (gravel) roads: the rental contract forbids them",
+      "type": "avoid_tag",
+      "params": {
+        "tag": "unsealed_road"
+      }
+    },
+    {
+      "id": "c7",
+      "nl": "Car returned at Adelaide Airport by 16:00 on 28 Dec; sightseeing only until 15:00",
+      "type": "manual",
+      "confirmed": "Plan ends at Glenelg 15:00, car return 16:00 (be_by on airport stop)"
+    },
+    {
+      "id": "c8",
+      "nl": "Child seat for a 6-year-old in the car",
+      "type": "manual"
+    },
+    {
+      "id": "c9",
+      "nl": "Hotel up to A$350 per night",
+      "type": "max_nightly_cost",
+      "params": {
+        "amount": 350
+      }
+    },
+    {
+      "id": "c10",
+      "nl": "One room for three: family room or two queen beds",
+      "type": "manual"
+    }
+  ],
+  "facts": [
+    {
+      "id": "f1",
+      "claim": "Twelve Apostles: booking required for every visit from 16 Oct 2026, free until April 2027; half-hour slots 06:00-19:00; no walk-ups; booking includes a car park. Gibson Steps and Loch Ard Gorge access unchanged",
+      "status": "verified",
+      "source": "https://www.greatoceanroadauthority.vic.gov.au/Projects/Twelve-Apostles-Visitor-Centre",
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "f1b",
+      "claim": "Twelve Apostles slots: half-hourly 6am-7pm, booked ticket needed, boom gate scans QR or plate",
+      "status": "verified",
+      "source": "https://www.standard.net.au/story/9364010/twelve-apostles-launches-new-booking-system-for-visitors/",
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "f2",
+      "claim": "Twelve Apostles Visitor Centre open Mon-Sun 08:00-20:00",
+      "status": "verified",
+      "source": "https://www.twelveapostles.org.au/",
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "f2b",
+      "claim": "Twelve Apostles Visitor Centre open on Christmas Day",
+      "status": "unverified",
+      "source": "https://www.twelveapostles.org.au/",
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "f3",
+      "claim": "Cape Otway Lightstation open Fri-Tue only, closed Christmas Day, tower closed for works: left out (closed 23-25 Dec)",
+      "status": "verified",
+      "source": "https://lightstation.com/operating-hours",
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "f4",
+      "claim": "Kennett River koalas are along Grey River Road, an unmade (gravel) road: walk it, don't drive",
+      "status": "verified",
+      "source": "https://secretmelbourne.com/kennett-river-koala-walk/",
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "f5",
+      "claim": "Maits Rest: 800 m gentle rainforest circuit, about 30 min",
+      "status": "verified",
+      "source": "https://www.greatoceanroadauthority.vic.gov.au/Land-We-Manage/National-Parks/Great-Otway-National-Park/Maits-Rest-Rainforest-Walk",
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "f6",
+      "claim": "Tower Hill reserve open 24 h; Worn Gundidj visitor centre 10:00-16:00 except Christmas Day; electric BBQs and toilets near the centre; emus, kangaroos, koalas",
+      "status": "verified",
+      "source": "https://www.parks.vic.gov.au/places-to-see/parks/Tower-Hill-Wildlife-Reserve",
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "f7",
+      "claim": "Christmas Day is a restricted trading day in Victoria: only exempt shops (petrol, cafes, restaurants, chemists, small shops) may open; most supermarkets shut",
+      "status": "verified",
+      "source": "https://business.vic.gov.au/business-information/public-holidays/operating-on-a-public-holiday",
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "f8",
+      "claim": "SA public holidays: Sat 26 Dec and Mon 28 Dec 2026",
+      "status": "verified",
+      "source": "https://www.safework.sa.gov.au/resources/public-holidays",
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "f9",
+      "claim": "Cleland Wildlife Park open daily 09:30-17:00 (last entry 16:30); closed Christmas Day and catastrophic fire danger days; entry A$34.50 adult, A$19 child (tourism listing)",
+      "status": "verified",
+      "source": "https://clelandwildlifepark.sa.gov.au/plan-your-visit/opening-hours",
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "f10",
+      "claim": "Child aged 4 to under 7: forward-facing seat with inbuilt harness or a booster seat, in the back seat",
+      "status": "verified",
+      "source": "https://www.sa.gov.au/topics/driving-and-transport/roads-and-traffic/seatbelts-and-child-restraints",
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "f11",
+      "claim": "IHG hotels near the route: Holiday Inn & Suites Geelong (opened 2023); Adelaide: Crowne Plaza Adelaide, Holiday Inn Express Adelaide City Centre, Hotel Indigo Adelaide Markets, InterContinental. None found in Torquay, Warrnambool, Port Fairy, Mount Gambier or Robe",
+      "status": "verified",
+      "source": "https://www.ihgplc.com/en/news-and-media/news-releases/2023/holiday-inn-and-suites-geelong-opens-in-the-heart-of-victorias-thriving-regional-centre",
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "f12",
+      "claim": "Great Ocean Road works: Kennett River-Grey River works from late May 2026 (about 4 months); Fairhaven landslip two-way diversion stays through the holiday period",
+      "status": "verified",
+      "source": "https://www.surfcoast.vic.gov.au/About-us/Road-upgrades-and-works/Anglesea-and-Aireys-Inlet-area-projects/Fairhaven-landslip",
+      "checked": "2026-11-09"
+    },
+    {
+      "id": "f13",
+      "claim": "Umpherston Sinkhole is free; sources give dawn-to-dusk or always open",
+      "status": "verified",
+      "source": "https://playandgo.com.au/umpherston-sinkhole-mount-gambier/",
+      "checked": "2026-11-09"
+    }
+  ],
+  "days": [
+    {
+      "date": "2026-12-23",
+      "depart": "09:45",
+      "stops": [
+        {
+          "place": "mel",
+          "kind": "start",
+          "short": "Land 08:30. Collect bags and the one-way car with the child seat fitted."
+        },
+        {
+          "place": "gee",
+          "kind": "overnight",
+          "refuel": true,
+          "leg": {
+            "km": 78.3,
+            "drive_min": 67,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Hotel. Afternoon on the waterfront and Eastern Beach. Easy first day."
+        }
+      ],
+      "stay": {
+        "name": "Holiday Inn & Suites Geelong (IHG)",
+        "place": "gee",
+        "brand": "IHG",
+        "status": "unbooked",
+        "source": "ihg.com",
+        "check_in_until": "23:00",
+        "cancel": "free cancellation, ≤A$350, 2 queens/family room",
+        "book_by": "2026-11-16"
+      },
+      "title": "Land, pick up car, Geelong"
+    },
+    {
+      "date": "2026-12-24",
+      "depart": "09:00",
+      "stops": [
+        {
+          "place": "gee",
+          "kind": "start"
+        },
+        {
+          "place": "bel",
+          "kind": "visit",
+          "dwell_min": 15,
+          "hours": "always",
+          "booking": "none",
+          "leg": {
+            "km": 30.8,
+            "drive_min": 36,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Surf lookout. Skip if running late."
+        },
+        {
+          "place": "spl",
+          "kind": "visit",
+          "dwell_min": 30,
+          "hours": "always",
+          "booking": "none",
+          "leg": {
+            "km": 19.8,
+            "drive_min": 23,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Lighthouse from outside."
+        },
+        {
+          "place": "arch",
+          "kind": "visit",
+          "dwell_min": 10,
+          "hours": "always",
+          "booking": "none",
+          "leg": {
+            "km": 7.1,
+            "drive_min": 12,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Photo stop."
+        },
+        {
+          "place": "lor",
+          "kind": "visit",
+          "dwell_min": 75,
+          "hours": "always",
+          "booking": "none",
+          "leg": {
+            "km": 13.9,
+            "drive_min": 20,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Lunch and the beach."
+        },
+        {
+          "place": "ken",
+          "kind": "visit",
+          "dwell_min": 45,
+          "hours": "always",
+          "booking": "none",
+          "leg": {
+            "km": 22.3,
+            "drive_min": 24,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Wild koalas. Park on the main road and WALK up Grey River Rd (gravel: don't drive it)."
+        },
+        {
+          "place": "apb",
+          "kind": "visit",
+          "dwell_min": 30,
+          "hours": "always",
+          "booking": "none",
+          "refuel": true,
+          "leg": {
+            "km": 22.8,
+            "drive_min": 23,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Fuel, and food for Christmas Day: most shops shut 25 Dec."
+        },
+        {
+          "place": "mai",
+          "kind": "visit",
+          "dwell_min": 40,
+          "hours": "always",
+          "booking": "none",
+          "leg": {
+            "km": 16.9,
+            "drive_min": 17,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "800 m rainforest boardwalk, ~30 min."
+        },
+        {
+          "place": "pca",
+          "kind": "overnight",
+          "leg": {
+            "km": 79.8,
+            "drive_min": 73,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Overnight."
+        }
+      ],
+      "stay": {
+        "name": "Port Campbell, to choose",
+        "place": "pca",
+        "brand": null,
+        "status": "unbooked",
+        "source": "visit12apostles.com.au",
+        "brand_note": "IHG has no hotel on the coast between Geelong and Adelaide (former Crowne Plaza Torquay is now Wyndham); choose_nights.py found 2 IHG nights is the most that fits 350 km / 4 h a day",
+        "book_by": "2026-11-16",
+        "cancel": "free cancellation, ≤A$350, 2 queens/family room"
+      },
+      "title": "Great Ocean Road: Torquay to Port Campbell"
+    },
+    {
+      "date": "2026-12-25",
+      "depart": "08:45",
+      "stops": [
+        {
+          "place": "pca",
+          "kind": "start"
+        },
+        {
+          "place": "gib",
+          "kind": "visit",
+          "dwell_min": 20,
+          "hours": "always",
+          "booking": "none",
+          "leg": {
+            "km": 12.4,
+            "drive_min": 11,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Steps to the beach under the cliffs."
+        },
+        {
+          "place": "twa",
+          "kind": "visit",
+          "dwell_min": 60,
+          "hours": [
+            "08:00",
+            "20:00"
+          ],
+          "booking": "required",
+          "leg": {
+            "km": 0.7,
+            "drive_min": 1,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Booked free 09:00 or 09:30 slot (it also holds your parking).",
+          "be_by": "09:30"
+        },
+        {
+          "place": "lag",
+          "kind": "visit",
+          "dwell_min": 45,
+          "hours": "always",
+          "booking": "none",
+          "leg": {
+            "km": 4.3,
+            "drive_min": 4,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Gorge and beach. No booking."
+        },
+        {
+          "place": "lob",
+          "kind": "visit",
+          "dwell_min": 15,
+          "hours": "always",
+          "booking": "none",
+          "leg": {
+            "km": 15.0,
+            "drive_min": 14,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Arch lookout."
+        },
+        {
+          "place": "boi",
+          "kind": "visit",
+          "dwell_min": 15,
+          "hours": "always",
+          "booking": "none",
+          "leg": {
+            "km": 27.5,
+            "drive_min": 28,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Lookout."
+        },
+        {
+          "place": "thl",
+          "kind": "visit",
+          "dwell_min": 90,
+          "hours": "always",
+          "booking": "none",
+          "leg": {
+            "km": 50.5,
+            "drive_min": 54,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Emus, koalas, kangaroos in a crater. Centre shut today, reserve open. BBQ picnic lunch."
+        },
+        {
+          "place": "pfy",
+          "kind": "visit",
+          "dwell_min": 45,
+          "hours": "always",
+          "booking": "none",
+          "leg": {
+            "km": 17.4,
+            "drive_min": 22,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Stroll by the harbour."
+        },
+        {
+          "place": "por",
+          "kind": "overnight",
+          "refuel": true,
+          "leg": {
+            "km": 71.8,
+            "drive_min": 59,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Overnight. Self-cater Christmas dinner, or book a restaurant now."
+        }
+      ],
+      "stay": {
+        "name": "Portland, to choose (with kitchen)",
+        "place": "por",
+        "brand": null,
+        "status": "unbooked",
+        "source": "visitgreatoceanroad.org.au",
+        "brand_note": "IHG has no hotel on the coast between Geelong and Adelaide (former Crowne Plaza Torquay is now Wyndham); choose_nights.py found 2 IHG nights is the most that fits 350 km / 4 h a day",
+        "book_by": "2026-11-16",
+        "cancel": "free cancellation, ≤A$350, 2 queens/family room"
+      },
+      "title": "Christmas Day: Twelve Apostles and Tower Hill"
+    },
+    {
+      "date": "2026-12-26",
+      "depart": "09:00",
+      "stops": [
+        {
+          "place": "por",
+          "kind": "start"
+        },
+        {
+          "place": "blu",
+          "kind": "visit",
+          "dwell_min": 30,
+          "hours": "always",
+          "booking": "none",
+          "leg": {
+            "km": 105.4,
+            "drive_min": 82,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Bright blue crater lake. SA clocks are 30 min behind."
+        },
+        {
+          "place": "ump",
+          "kind": "visit",
+          "dwell_min": 40,
+          "hours": "always",
+          "booking": "none",
+          "refuel": true,
+          "leg": {
+            "km": 5.6,
+            "drive_min": 9,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Sinkhole garden, free. Fuel here."
+        },
+        {
+          "place": "rob",
+          "kind": "visit",
+          "dwell_min": 75,
+          "hours": "always",
+          "booking": "none",
+          "leg": {
+            "km": 135.6,
+            "drive_min": 100,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Lunch and the beach."
+        },
+        {
+          "place": "kin",
+          "kind": "overnight",
+          "refuel": true,
+          "leg": {
+            "km": 43.7,
+            "drive_min": 35,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Overnight. See the Big Lobster."
+        }
+      ],
+      "stay": {
+        "name": "Kingston SE, to choose",
+        "place": "kin",
+        "brand": null,
+        "status": "unbooked",
+        "source": "southaustralia.com",
+        "brand_note": "IHG has no hotel on the coast between Geelong and Adelaide (former Crowne Plaza Torquay is now Wyndham); choose_nights.py found 2 IHG nights is the most that fits 350 km / 4 h a day",
+        "book_by": "2026-11-16",
+        "cancel": "free cancellation, ≤A$350, 2 queens/family room"
+      },
+      "title": "Boxing Day: into South Australia"
+    },
+    {
+      "date": "2026-12-27",
+      "depart": "09:00",
+      "stops": [
+        {
+          "place": "kin",
+          "kind": "start"
+        },
+        {
+          "place": "men",
+          "kind": "visit",
+          "dwell_min": 45,
+          "hours": "always",
+          "booking": "none",
+          "refuel": true,
+          "leg": {
+            "km": 146.1,
+            "drive_min": 109,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Break by Lake Albert, fuel. Coorong lagoons beside the road."
+        },
+        {
+          "place": "adl",
+          "kind": "overnight",
+          "short": "Hotel. Free afternoon.",
+          "leg": {
+            "km": 149.2,
+            "drive_min": 112,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          }
+        }
+      ],
+      "stay": {
+        "name": "Crowne Plaza Adelaide (IHG)",
+        "place": "adl",
+        "brand": "IHG",
+        "status": "unbooked",
+        "source": "ihg.com",
+        "book_by": "2026-11-16",
+        "cancel": "free cancellation, ≤A$350, 2 queens/family room"
+      },
+      "title": "Coorong to Adelaide"
+    },
+    {
+      "date": "2026-12-28",
+      "depart": "09:05",
+      "stops": [
+        {
+          "place": "adl",
+          "kind": "start",
+          "short": "Check out."
+        },
+        {
+          "place": "cle",
+          "kind": "visit",
+          "dwell_min": 150,
+          "hours": [
+            "09:30",
+            "17:00"
+          ],
+          "booking": "recommended",
+          "short": "Koalas, kangaroos and other native animals. Opens 09:30.",
+          "leg": {
+            "km": 18.0,
+            "drive_min": 25,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          }
+        },
+        {
+          "place": "gle",
+          "kind": "visit",
+          "dwell_min": 140,
+          "hours": "always",
+          "booking": "none",
+          "short": "Beach, playground, lunch. Leave by 15:00.",
+          "leg": {
+            "km": 27.3,
+            "drive_min": 36,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          }
+        },
+        {
+          "place": "adla",
+          "kind": "airport",
+          "be_by": "16:00",
+          "refuel": true,
+          "leg": {
+            "km": 5.6,
+            "drive_min": 9,
+            "source": "OSRM demo server (OSM data), 2026-11-09"
+          },
+          "short": "Refuel, return car by 16:00. Flight 18:00."
+        }
+      ],
+      "title": "Cleland koalas, Glenelg, fly home"
+    }
+  ],
+  "overnight_candidates": [
+    {
+      "place": "tor",
+      "after": "gee",
+      "name": "Torquay",
+      "refuel": true
+    },
+    {
+      "place": "lor",
+      "after": "lor",
+      "name": "Lorne",
+      "refuel": true
+    },
+    {
+      "place": "pca",
+      "after": "lag",
+      "name": "Port Campbell",
+      "refuel": true
+    },
+    {
+      "place": "war",
+      "after": "boi",
+      "name": "Warrnambool",
+      "refuel": true
+    },
+    {
+      "place": "por",
+      "after": "pfy",
+      "name": "Portland",
+      "refuel": true
+    },
+    {
+      "place": "mtg",
+      "after": "ump",
+      "name": "Mount Gambier",
+      "refuel": true
+    },
+    {
+      "place": "kin",
+      "after": "kin",
+      "name": "Kingston SE",
+      "refuel": true
+    },
+    {
+      "place": "men",
+      "after": "men",
+      "name": "Meningie",
+      "refuel": true
+    },
+    {
+      "place": "tai",
+      "after": "men",
+      "name": "Tailem Bend",
+      "refuel": true
+    }
+  ],
+  "bookings": [
+    {
+      "id": "k_car",
+      "what": "One-way car MEL→ADL, child seat, both adults as drivers",
+      "date": "2026-12-23",
+      "status": "unbooked",
+      "book_by": "2026-11-16",
+      "source": "rental company site",
+      "cancel": "check one-way fee"
+    },
+    {
+      "id": "k_12a",
+      "what": "Twelve Apostles free timed entry, 09:00",
+      "date": "2026-12-25",
+      "place": "twa",
+      "status": "unbooked",
+      "book_by": "2026-11-30",
+      "source": "twelveapostles.org.au",
+      "cancel": "no walk-ups"
+    },
+    {
+      "id": "k_cle",
+      "what": "Cleland entry (koala hold extra, pre-book)",
+      "date": "2026-12-28",
+      "place": "cle",
+      "status": "unbooked",
+      "book_by": "2026-12-14",
+      "source": "clelandwildlifepark.sa.gov.au"
+    }
+  ],
+  "contingencies": [
+    {
+      "risk": "Great Ocean Road closed or delayed (landslip, works, fire) on 24 Dec",
+      "trigger": "VicTraffic and VicEmergency on the evening of 23 Dec",
+      "decide_by": "2026-12-23",
+      "plan": "Plan B: Geelong → Colac → Cobden → Port Campbell inland, 166 km, about 2 h 25 (checked); you miss Lorne to Apollo Bay",
+      "source": "https://traffic.vicroads.vic.gov.au/"
+    },
+    {
+      "risk": "Catastrophic fire danger day: parks and Cleland close",
+      "trigger": "Fire danger rating the evening before (CFA in Victoria, CFS in SA)",
+      "decide_by": "the evening before each day",
+      "plan": "Stay on highways and in towns; if Cleland is shut on 28 Dec, spend the morning at Glenelg",
+      "source": "https://clelandwildlifepark.sa.gov.au/plan-your-visit/opening-hours"
+    }
+  ],
+  "prep": {
+    "checklist": [
+      "Rental: both adults on the contract; child seat booked; one-way fee and fuel policy checked; unsealed roads are excluded.",
+      "Book the free Twelve Apostles slot (no walk-ups).",
+      "Buy Christmas food on 24 Dec in Lorne or Apollo Bay; fill the tank on 24 Dec too.",
+      "Check VicTraffic and the fire danger rating each evening.",
+      "SA clocks are 30 min behind Victoria from 26 Dec.",
+      "Download offline maps in case phone signal drops on the coast."
+    ],
+    "packing": [
+      "Sun hats, sunscreen, water bottles",
+      "Warm layer: coast wind is cold even in summer",
+      "Shoes with grip for steps and boardwalks",
+      "Picnic gear and a cooler bag for Christmas Day",
+      "Car charger and phone mount",
+      "Motion-sickness tablets: the road is very winding"
+    ]
+  },
+  "report": {
+    "lang": "en",
+    "format": "md",
+    "detail": "brief",
+    "layout": "phone",
+    "title": "Melbourne → Adelaide by the Great Ocean Road · 23–28 Dec 2026",
+    "sections": [
+      "overview",
+      "days",
+      "bookings",
+      "issues",
+      "prep"
+    ],
+    "open_items": [
+      "IHG: only Geelong and Adelaide have IHG hotels near the route, so 3 nights are non-brand.",
+      "Hotel prices not checked yet: filter ≤A$350, 1 room for 3, free cancellation.",
+      "Twelve Apostles on 25 Dec: site says open daily; confirm when booking.",
+      "Great Ocean Road works and landslips: check VicTraffic on 23 Dec.",
+      "Hotel desk hours: all arrivals are by 17:15; check anyway.",
+      "Christmas dinner: few places open; self-cater or book in Portland now."
+    ]
+  }
+}
