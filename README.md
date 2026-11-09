@@ -6,7 +6,7 @@
 
 Legwise is a Claude Code plugin that packages `road-trip-planner`, a Claude skill for planning, checking and repairing multi-day road trips. It asks the right questions first, builds the plan from real road data, and checks it with a deterministic script, not by eye. The final plan comes out in a fixed-format report.
 
-See [`examples/report-phone.md`](examples/report-phone.md) for a finished report.
+See [`examples/report-phone.md`](examples/report-phone.md) for a finished report, and [`evaluation/REPORT.md`](evaluation/REPORT.md) for how it compares with other travel skills.
 
 ## What it does
 
@@ -77,6 +77,17 @@ python3 $S/render_report.py trip.json --out trip.pdf --lang fr   # any language;
 
 The plan file format is documented in `references/plan-format.md`. `examples/` has a complete plan for a fictional trip and its reports as phone Markdown and print PDF.
 
+## Evaluation
+
+`evaluation/REPORT.md` describes two blind comparisons against four other travel skills, an earlier version of this skill and a no-skill baseline. All prompts, hidden answers, the rubric, the anonymised outputs and the letter mapping are included.
+
+| | road-trip-planner | best other skill | no skill |
+|---|---|---|---|
+| Total, 2 rounds (/32) | **30** | 25 (itinerary-optimizer) | 27.5 |
+| Plan quality only (/18) | **16** | 16 (plan-tour-route) | 15.5 |
+
+Honestly: most of the lead comes from asking better questions, and on plan quality it ties for first. In both rounds the grader would have handed the traveller a different plan. The rubric was written by the skill's author, with one run per skill per round. The report has the details, including the weaknesses the graders found.
+
 ## Limits
 
 - **Public map services.** Nominatim and the OSRM demo server are free public services with usage policies: light personal use only, about 1 request per second. Set `ROAD_TRIP_UA` to a User-Agent that identifies you.
@@ -96,6 +107,7 @@ plugins/legwise/
     references/                     intake questions, plan format, bookings and prep
     scripts/                        routing, checker, optimisers, report renderer, tests
 examples/                           a fictional trip and its reports
+evaluation/                         blind comparison: rubric, answers, outputs, scores
 skills.sh.json                      tells the skills CLI where the skill is
 PRIVACY.md                          what the plugin stores and sends
 ```

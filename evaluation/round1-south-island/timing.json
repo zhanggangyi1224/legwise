@@ -1,0 +1,47 @@
+{
+  "note": "Subagent tokens and wall-clock minutes, phases 1 and 2 together.",
+  "runs": {
+    "trip-planner": {
+      "phase1_tokens": 48621,
+      "phase2_tokens": 144940,
+      "total_tokens": 193561,
+      "minutes": 11.1
+    },
+    "plan-tour-route": {
+      "phase1_tokens": 51554,
+      "phase2_tokens": 180039,
+      "total_tokens": 231593,
+      "minutes": 20.8
+    },
+    "road-trip-planner (an earlier version)": {
+      "phase1_tokens": 52381,
+      "phase2_tokens": 186032,
+      "total_tokens": 238413,
+      "minutes": 15.2
+    },
+    "travel-agent": {
+      "phase1_tokens": 54801,
+      "phase2_tokens": 250318,
+      "total_tokens": 305119,
+      "minutes": 18.9
+    },
+    "no skill": {
+      "phase1_tokens": 48422,
+      "phase2_tokens": 143430,
+      "total_tokens": 191852,
+      "minutes": 13.0
+    },
+    "itinerary-optimizer": {
+      "phase1_tokens": 49271,
+      "phase2_tokens": 131027,
+      "total_tokens": 180298,
+      "minutes": 11.5
+    },
+    "road-trip-planner (this release)": {
+      "phase1_tokens": 62392,
+      "phase2_tokens": 194188,
+      "total_tokens": 256580,
+      "minutes": 19.7
+    }
+  }
+}
