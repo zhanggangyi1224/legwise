@@ -14,7 +14,10 @@ whichever day passes them. Limits come from the plan's `max_daily_km` and
 `max_daily_drive_min` constraints, or `--max-km` / `--max-drive-min`. Kept fixed:
 booked stays, booked or pending `bookings` that name a `place` and `date` (that sight
 must fall on that day), and `no_visits_on` dates. Options are ranked by brand nights
-(`preferences.hotel_brands`), then the longest driving day, then total driving.
+(`preferences.hotel_brands`), then driving on a flight day beyond the plan's
+`departure_day_max_drive_min` rule (default 90), then the longest driving day, then total
+driving. Towns with no brand candidate are listed, because a hotel nobody looked up
+can't be chosen.
 Sunset and opening hours are for verify_trip.py: always check the written plan.
 """
 import argparse
@@ -122,6 +125,8 @@ def solve(plan, line, km, mins, max_km, max_min, top=5, slack=0.10):
             sight_day[b["place"]] = b["date"]
     quiet = {c["params"]["date"] for c in plan.get("hard_constraints") or []
              if c.get("type") == "no_visits_on"}
+    flight_day = (line[-1]["stop"] or {}).get("kind") == "airport"
+    depart_limit = (plan.get("rules") or {}).get("departure_day_max_drive_min", 90)
 
     def day_cost(a, b):
         path = [a] + [s for s in sights if a < s < b] + [b]
@@ -152,13 +157,33 @@ def solve(plan, line, km, mins, max_km, max_min, top=5, slack=0.10):
                            in brands or line[i].get("brand") in brands) if brands else 0
         option = {"towns": [line[i]["place"] for i in combo], "ends": ends,
                   "brand_nights": brand_nights, "days": rows, "over": over,
+                  "depart_over": max(0.0, rows[-1][1] - depart_limit) if flight_day else 0.0,
                   "longest_min": max(r[1] for r in rows), "total_min": sum(r[1] for r in rows)}
         (near if over > 0 else options).append(option)
-    options.sort(key=lambda o: (-o["brand_nights"], o["longest_min"], o["total_min"]))
+    options.sort(key=lambda o: (-o["brand_nights"], o["depart_over"], o["longest_min"],
+                                o["total_min"]))
     best = options[0]["brand_nights"] if options else -1
     near = [o for o in near if o["brand_nights"] > best]
     near.sort(key=lambda o: (-o["brand_nights"], o["over"], o["total_min"]))
     return options[:top], len(options), near[:3]
+
+
+def towns_without_brand(plan, line):
+    """Overnight towns on the line with no candidate of a preferred brand."""
+    brands = set((plan.get("preferences") or {}).get("hotel_brands") or [])
+    if not brands:
+        return []
+    info = town_info(plan)
+    covered = {item["place"] for item in line if item.get("brand") in brands}
+    covered |= {p for p, s in info.items() if s.get("brand") in brands}
+    names = {pid: p.get("name", pid) for pid, p in plan["places"].items()}
+    seen, missing = set(), []
+    for item in line:
+        p = item["place"]
+        if item["role"] == "town" and p not in covered and p not in seen:
+            seen.add(p)
+            missing.append(names.get(p, p))
+    return missing
 
 
 def write_plan(plan, line, option, path):
@@ -232,6 +257,12 @@ def main():
 
     for k, o in enumerate(options, 1):
         show(f"{k}.", o)
+        if o["depart_over"]:
+            print(f"   flight day has {o['days'][-1][1]:.0f} min of driving")
+    missing = towns_without_brand(plan, line)
+    if missing:
+        print("\nNo brand candidate recorded in: " + ", ".join(missing) + ". Check the brand's "
+              "own site for each and add any hotel you find to overnight_candidates.")
     if near:
         print("\nNear misses: more brand nights, but a day goes over a limit (traveller decides):")
         for o in near:

@@ -122,6 +122,20 @@ class Nights(unittest.TestCase):
             for st in d["stops"]:
                 self.assertIn(st["place"], p["places"])
 
+    def test_less_flight_day_driving_ranks_first(self):
+        p = plan(max_km=1000)
+        del p["preferences"]
+        p["rules"] = {"departure_day_max_drive_min": 60}
+        options, _ = solve(p)
+        self.assertEqual(options[0]["towns"][-1], "b2")  # closest to the airport
+        self.assertGreater(options[0]["depart_over"], 0)
+
+    def test_towns_without_brand_candidate_listed(self):
+        p = plan()
+        self.assertEqual(cn.towns_without_brand(p, cn.build_line(p)), ["Town 1", "Town 2"])
+        del p["preferences"]
+        self.assertEqual(cn.towns_without_brand(p, cn.build_line(p)), [])
+
 
 if __name__ == "__main__":
     unittest.main()
