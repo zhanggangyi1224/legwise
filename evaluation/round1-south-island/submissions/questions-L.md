@@ -1,184 +1,158 @@
-# Questions before planning: Christchurch to Queenstown, early March
+# Questions before planning: Christchurch to Queenstown, early March 2027
 
-Intro to the traveller:
+What I already have from your message: a self-drive trip on New Zealand's South Island, two travellers, one-way from Christchurch (Ōtautahi) to Queenstown (Tāhuna), in early March (2027). I won't ask about those again.
 
-> Great trip: early March is late summer in the South Island, with long days and settled weather, and it's after the school-holiday rush. Before I plan, I'll ask a few short multiple-choice rounds so I don't have to rebuild the plan later. You can type your own answer under "Other" for any question.
->
-> Already noted: 2 people, self-drive, one-way from Christchurch (Ōtautahi) to Queenstown (Tāhuna), early March 2027.
-
-Each round is shown as one multiple-choice prompt (at most 4 questions per prompt, 2–4 options each; "Other" is always available). "(Recommended)" marks my suggestion. Round 0 (choosing a destination) is skipped because the start and end are already set.
+The questions come in five short multiple-choice rounds, each shown as one question card (Round 1 is split over two cards). Pick one option, or several where it says "pick any". Every question also has an **Other** box where you can type your own answer. My recommended option is listed first.
 
 ---
 
-## Round 1a: trip skeleton
+## Round 1a: route and dates
 
-**Q1. [Route] Which way do you want to drive from Christchurch to Queenstown?** (single choice)
+**1. Route**: Which way do you want to drive from Christchurch to Queenstown?
+- **Inland via Lake Tekapo (Takapō) and Aoraki / Mount Cook (Recommended)**: the shortest scenic route, about 480 km of driving at minimum. Lakes, alpine views and dark-sky stargazing. Works well in 4 to 6 nights.
+- **West Coast via Arthur's Pass, the Franz Josef / Fox glaciers and Haast Pass, then Wānaka**: roughly 750 km, rainforest and glaciers, with longer and more winding driving days. Best with 6 or more nights.
+- **Grand route: West Coast and glaciers, then Wānaka, Aoraki / Mount Cook and on to Queenstown**: you see both, at about 1,000+ km. Needs 8 or more nights.
+- **Not sure yet. Suggest one that fits my number of days**
 
-- **Inland via Lake Tekapo (Takapō) and Aoraki/Mount Cook, then Wānaka (Recommended if you have under a week)**: the most direct scenic route, about 480–550 km in total, with turquoise lakes, Hooker Valley and dark-sky stargazing. Fits 4–6 days.
-- **West Coast via Arthur's Pass, Hokitika, Franz Josef/Fox Glacier and Haast Pass, then Wānaka**: rainforest, glaciers and wild beaches; about 1,000 km with several slow mountain roads. Needs about 6–8 days.
-- **Both: West Coast first, then a side trip to Aoraki/Mount Cook and Tekapo before Queenstown**: the fullest loop of mountains and coast; about 1,300 km. Needs about 9–11 days.
-- **East and south: Kaikōura or Akaroa, Dunedin, the Catlins, Te Anau/Milford Sound, then Queenstown**: coast, wildlife and Fiordland; about 1,000–1,200 km. Needs about 8–10 days.
+**2. Dates**: Which dates, and how many nights from your first night in Christchurch to your last night before you leave Queenstown?
+- **About 7 nights, e.g. Mon 1 to Mon 8 March (Recommended)**
+- **About 5 nights, e.g. Mon 1 to Sat 6 March**
+- **About 10 nights, e.g. Mon 1 to Thu 11 March**
+- **My dates are flexible by a day or two** (type your window under Other if you like)
 
-**Q2. [Dates] Which dates, and how many days do you have for the drive?** (single choice; please type exact dates under "Other" if you have them)
+**3. Drivers**: How many of you will drive?
+- **Both of us, sharing the driving (Recommended)**
+- **Only one of us**
 
-- **About 7 days, e.g. pick up Mon 1 Mar 2027, finish in Queenstown Sun 7 Mar (Recommended)**
-- **About 5 days, e.g. 1–5 Mar 2027**
-- **About 10 days, e.g. 1–10 Mar 2027**
-- **Flexible by ±1–2 days, suggest the best length for my route**
+---
 
-**Q3. [Drivers] How many of you will drive?**
+## Round 1b: licences, vehicle and travel days
 
-- **Both of us, sharing the driving (Recommended)**: safer on long mountain days; the rental will need both drivers listed.
-- **Only one driver**
-
-**Q4. [Licence] What licence does each driver hold?**
-
-- **Full licence in English (any country)**: valid in NZ for up to 12 months.
-- **Full licence not in English**: you'll also need an International Driving Permit or an approved English translation.
+**4. Licence**: What driving licence does each driver hold?
+- **Full licence from another country, printed in English**
 - **Full New Zealand licence**
-- **Provisional, restricted or learner licence**: most rental companies won't accept this, so tell me now.
+- **Full licence that is not in English**: in NZ you then also need an International Driving Permit or an approved translation
+- **Provisional or learner licence**: most rental companies won't accept this
 
-## Round 1b: arrival, departure and vehicle
-
-**Q5. [Flights] How are you getting to Christchurch and leaving from Queenstown?**
-
-- **Flying into Christchurch and out of Queenstown together, same flights both ways (Recommended)**
-- **Same flight in, but we leave at different times or from different airports**
-- **Already in New Zealand / arriving another way (e.g. from the North Island)**
-- **Not decided yet, help me fit the drive around flights**
-
-**Q6. [First night] Where does the trip start?**
-
-- **We land in Christchurch and spend the first night there, collecting the car next morning (Recommended)**: avoids driving tired after a long flight.
-- **We land and pick up the car straight away and start driving the same day**
-- **We're already in Christchurch the night before**
-
-**Q7. [Vehicle] What will you drive and where will you sleep?**
-
+**5. Vehicle**: What will you drive?
 - **Rental car, staying in hotels or motels (Recommended)**
-- **Campervan, staying in holiday parks or campsites**
-- **Car plus some camping or huts**
-- **Our own car**
+- **Self-contained campervan**: changes where you sleep (holiday parks and campsites) and how fast you drive
+- **Not decided yet, show me the trade-off**
+
+**6. Flights**: How are you getting to Christchurch and away from Queenstown?
+- **Flying into Christchurch (CHC) and out of Queenstown (ZQN) together, not booked yet**
+- **Flights already booked** (please paste the flight numbers and times)
+- **Arriving or leaving another way, or we fly on different flights** (tell me how)
+
+**7. Last day**: On the day you leave Queenstown:
+- **No sightseeing, just return the car and go (Recommended)**
+- **Sights only if there is time before the flight**
 
 ---
 
-## Round 2: where you stay
+## Round 2: hotels
 
-**Q8. [Hotel brand] Which hotel brands or loyalty programmes should I favour?** (multi-select)
-
-- **Accor ALL (Novotel, Mercure, ibis, Sofitel, Pullman, Peppers…)**
+**8. Hotel brand** (pick any): Which hotel brands or loyalty programs should I favour?
+- **No preference, good motels and apartments are fine**
+- **Accor (ALL: Novotel, Mercure, ibis, Pullman and others)**
 - **Marriott Bonvoy**
 - **IHG, Hilton or Hyatt**
-- **No preference: good motels, lodges or B&Bs are fine**
 
-(Note: chain hotels are mostly in Christchurch, Queenstown and a few lake towns. In small places like Franz Josef, Twizel or Mount Cook Village, motels and lodges are usually the main choice. I'll check each chain's own site before promising any brand nights.)
+**9. Brand rule** (only if you picked a brand): How strict is that?
+- **As many brand nights as possible, other places where the brand has no hotel (Recommended)**
+- **Brand only, even if it changes the route**
+- **Price comes first**
 
-**Q9. [Brand rule] How strict is that preference?**
-
-- **As many brand nights as possible, other places where there's no brand hotel (Recommended)**
-- **Brand only, even if it changes the route or overnight towns**
-- **Price and location first, brand is only a tie-breaker**
-
-**Q10. [Room] What room do you need?**
-
+**10. Room**: What room do you need?
 - **One bed (queen or king)**
 - **Two separate beds (twin)**
 - **Two separate rooms**
 
-**Q11. [Budget] Roughly how much per night for the room, in NZ dollars?** (March is busy in Queenstown and Tekapo, and prices are higher there.)
-
-- **NZ$180–300 per night (Recommended mid-range)**
-- **Under NZ$180 per night**
-- **NZ$300–500 per night**
+**11. Budget**: Hotel budget per night for the room, in New Zealand dollars? (Early March is still busy, so Queenstown, Tekapo and Mount Cook can be expensive.)
+- **NZ$180 to 280**
+- **Under NZ$180**
+- **NZ$280 to 450**
 - **No set limit**
 
 ---
 
 ## Round 3: driving rhythm
 
-**Q12. [Daily km] What's the most you want to drive in one day?** (Many South Island roads are two-lane and winding, so plan on roughly 60–70 km per hour of driving.)
+**12. Daily km**: The most you want to drive in one day? NZ roads are mostly two-lane and winding, so 300 km is often about 4 hours.
+- **Up to about 300 km (Recommended)**
+- **Up to about 200 km**
+- **Up to about 400 km**
+- **500 km is fine on one or two days**
 
-- **Up to about 300 km (around 4 h of driving) (Recommended)**
-- **Up to about 200 km (around 3 h)**
-- **Up to about 400 km (around 5–6 h)**
-- **Over 400 km is fine on one or two days**
-
-**Q13. [Pace] How full should the days be?**
-
-- **Balanced: a few highlights a day with time to linger (Recommended)**
-- **As many sights as possible, early starts are fine**
+**13. Pace**: How full should the days be?
+- **Balanced: a few sights a day with time to enjoy them (Recommended)**
+- **As many sights as possible, early starts**
 - **Relaxed, with a rest day or two**
 
-**Q14. [Base] Move every night or stay put?**
+**14. Base**: Move every night, or stay put?
+- **Mix: 2 nights in the best places, 1 night elsewhere (Recommended)**
+- **A new place most nights**
+- **Bases of 2 to 3 nights with day trips**
 
-- **Mix: 2 nights in the best places (e.g. Tekapo/Mount Cook, Wānaka, Queenstown), one night elsewhere (Recommended)**
-- **New place almost every night**
-- **2–3-night bases with day trips**
-
-**Q15. [Dark] Are you happy to drive after dark?**
-
-- **No, always arrive before sunset (Recommended)**: wildlife, sheep and unlit mountain roads.
-- **Short, easy stretches after dark are fine**
+**15. Dark**: Driving after dark?
+- **Never after sunset (Recommended)**: sunset is around 20:00 in early March, and alpine roads have no lighting
+- **Short stretches in or near towns are fine**
 
 ---
 
-## Round 4: interests and things to avoid
+## Round 4: what you want to see and avoid
 
-**Q16. [Interests] What do you most want to see and do?** (multi-select)
+**16. Interests** (pick any): What do you most want to see?
+- **Lakes, mountains and lookouts**
+- **Walks and day hikes** (for example Hooker Valley Track, Roys Peak)
+- **Glaciers, fiords and wildlife** (for example penguins, seals, dolphins)
+- **Stargazing, hot pools, wine and food**
 
-- **Lakes, mountains, lookouts and stargazing (Tekapo, Aoraki/Mount Cook, Wānaka)**
-- **Fiordland: Milford Sound (Piopiotahi) cruise or scenic flight**
-- **Glaciers, rainforest and wild coast (West Coast)**
-- **Food, wine and small towns (Central Otago wineries, Arrowtown) / adventure activities (jet boat, bungy)**
+**17. Milford Sound (Piopiotahi)**: It is about 4 hours' drive each way from Queenstown. Do you want it in the plan?
+- **Yes, with a night in Te Anau so the drive and cruise fit in one day (Recommended)**
+- **Yes, as a day trip from Queenstown by coach or scenic flight, without driving it ourselves**
+- **No, leave it out**
 
-**Q17. [Avoid] Anything you'd rather avoid?** (multi-select)
-
+**18. Avoid** (pick any): Anything to avoid?
 - **Boats or cruises (seasickness)**
-- **Long or steep walks (more than about 1–2 hours, or many steps)**
-- **Narrow, winding or unsealed mountain roads (e.g. Crown Range, Skippers, Milford Road day trip)**
-- **Expensive guided tours or scenic flights**
+- **Long or steep walks**
+- **Narrow mountain passes or unsealed (gravel) roads**
+- **Expensive guided tours, helicopter or scenic flights**
 
-**Q18. [Tours] For fixed-time tours (e.g. Milford cruise, glacier heli-hike, Tekapo stargazing):**
-
-- **Book ahead for a fixed slot and plan the day around it (Recommended)**
-- **Decide on the day where walk-up places are usually available**
-- **Show me the list with prices first, then I'll choose**
-
-**Q19. [Last day] On the day you fly out of Queenstown:**
-
-- **No sightseeing, just get to the airport and return the car (Recommended)**
-- **Sights only if there's time before the flight**
+**19. Tours**: For fixed-time activities (cruises, glacier or stargazing tours):
+- **Book ahead for a fixed time slot (Recommended)**: early March slots can sell out
+- **Decide on the day where walk-up tickets exist**
+- **Show me the list first, then I'll choose**
 
 ---
 
 ## Round 5: what's booked and what you'd like from me
 
-**Q20. [Booked] What's already booked?** (multi-select; please paste or attach any confirmations, and I'll plan around them as fixed points)
-
+**20. Booked** (pick any): What's already booked?
+- **Nothing yet**
 - **Flights**
 - **Rental car or campervan**
 - **Some hotels**
-- **Nothing yet**
 
-**Q21. [Language] Which language should the plan be written in?**
+If anything is booked, please paste or attach the confirmations (I only need the reference, dates, times, place and price, not personal details), and I'll plan around them as fixed points.
 
-- **English, with Māori and local place names as NZ maps show them (Recommended)**
-- **English, map names only**
+**21. Language**: Which language should the plan be written in? (I'll keep replying in the language you write to me in.)
+- **English, with local Māori place names alongside where maps show them (Recommended)**
+- **English, with place names only as Google Maps shows them**
+- (For any other language, type it under Other.)
 
-**Q22. [Output] What should the final plan look like?**
-
-- **Short, phone-friendly page to read on the road (Recommended)**
+**22. Output**: What should the final plan be?
+- **Short, phone-friendly page you can read on the road (Recommended)**
 - **Detailed PDF to print or share**
 - **Web page**
 - **Just a summary here in chat**
 
-**Q23. [Scope] What should the plan cover?**
-
-- **Only the drive, from car pick-up in Christchurch to drop-off in Queenstown (Recommended)**
-- **Also flights, airport transfers and the nights before and after**
+**23. Scope**: What should the plan cover?
+- **Only the driving trip, Christchurch to Queenstown**
+- **Also the flights and airport transfers around it**
 
 ---
 
-## After the answers
+## After your answers
 
-Before routing anything, I'll read back a short summary with hard limits (e.g. maximum km per day, no driving after dark, things to avoid, booked times) listed separately from preferences, and ask you to confirm it. Once the route is chosen, I'll also ask you for a real one-way rental quote (Christchurch pick-up, Queenstown drop-off) for your dates, since one-way fees can change which route makes sense, and check that the rental desk is open when your flight lands.
+I'll read the full list back to you in plain words, with your firm limits (such as maximum daily km or no driving after dark) kept separate from preferences, before routing anything. Before fixing the route, I'll also check two things with you: a real one-way rental quote from Christchurch to Queenstown for your dates (one-way fees can change which route makes sense), and that the rental desk's opening hours fit your arrival time.

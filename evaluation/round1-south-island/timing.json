@@ -38,10 +38,10 @@
       "minutes": 11.5
     },
     "road-trip-planner (this release)": {
-      "phase1_tokens": 62392,
-      "phase2_tokens": 194188,
-      "total_tokens": 256580,
-      "minutes": 19.7
+      "phase1_tokens": 62626,
+      "phase2_tokens": 276528,
+      "total_tokens": 339154,
+      "minutes": 30.4
     }
   }
 }

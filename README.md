@@ -85,10 +85,10 @@ The plan file format is documented in `references/plan-format.md`. `examples/` h
 
 | | road-trip-planner | best other skill | no skill |
 |---|---|---|---|
-| Total, 2 rounds (/32) | **30** | 25 (itinerary-optimizer) | 27.5 |
-| Plan quality only (/18) | **16** | 16 (plan-tour-route) | 15.5 |
+| Total, 2 rounds (/32) | **30.5** | 26 (itinerary-optimizer) | 28 |
+| Plan quality only (/18) | **16.5** | 15.5 (plan-tour-route) | 16 |
 
-Honestly: most of the lead comes from asking better questions, and on plan quality it ties for first. In both rounds the grader would have handed the traveller a different plan. The rubric was written by the skill's author, with one run per skill per round. The report has the details, including the weaknesses the graders found.
+In both rounds the grader would hand the traveller the road-trip-planner plan. Honestly: part of the lead comes from asking better questions, and on plan quality it leads narrowly. This version was tuned to fix weaknesses the graders found on these same two tasks, the rubric was written by the skill's author, and each skill ran once per round. The report has the details, including the weaknesses still found.
 
 ## Limits
 

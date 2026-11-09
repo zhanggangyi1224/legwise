@@ -2,7 +2,7 @@
 
 Two blind comparisons of `road-trip-planner` (this release) against four other travel skills, an earlier version of itself, and a no-skill baseline. Everything needed to check the scores is in this folder.
 
-**Short version:** `road-trip-planner` scored highest overall in both rounds. Most of the lead comes from the questions it asks before planning. On plan quality alone it tied for first with plan-tour-route. In both rounds the grader said it would hand the traveller a different plan.
+**Short version:** `road-trip-planner` scored highest in both rounds, and in both the grader said it would hand the traveller this plan. Part of the lead comes from the questions it asks before planning. On plan quality alone it also came first, but narrowly. Version 1.1.0 was tuned to fix weaknesses found on these same two tasks, so read the results as "fixed what the graders found", not as proof of a general lead.
 
 ## Method
 
@@ -22,56 +22,57 @@ The hidden answers carried deliberate traps:
 
 | Skill | Questions /7 | Plan /9 | Total /16 |
 |---|---|---|---|
-| **road-trip-planner** | **7** | **8.5** | **15.5** |
-| no skill | 5.5 | **8.5** | 14 |
-| road-trip-planner (earlier version) | 4.5 | **8.5** | 13 |
-| travel-agent | 4 | **8.5** | 12.5 |
-| itinerary-optimizer | 4.5 | 7.5 | 12 |
+| **road-trip-planner** | **7** | **9** | **16** |
+| no skill | 5.5 | 8.5 | 14 |
+| road-trip-planner (earlier version) | 5 | 8.5 | 13.5 |
+| itinerary-optimizer | 5 | 7.5 | 12.5 |
+| travel-agent | 4.5 | 8 | 12.5 |
 | plan-tour-route | 3.5 | 8 | 11.5 |
-| trip-planner | 3.5 | 8 | 11.5 |
+| trip-planner | 4 | 7.5 | 11.5 |
 
-The grader said it would hand the traveller the no-skill plan, for its complete route with weather-buffer nights, named hotels with prices, and dated bookings. It said road-trip-planner scored highest because its questions were the best, but its PDF left four hotels unnamed and read thin for a "detailed" plan.
+The grader would hand the traveller the road-trip-planner plan. It was the only plan to meet every hard rule and also give a booking list with links, book-by dates and buy-on-site items, and its facts checked out where others were wrong. Its weak spot: about 200 km of backtracking over Lindis Pass to win a fifth Accor night. The plan offered a checked alternative without it.
 
 ### Round 2: Melbourne → Adelaide over Christmas (short Markdown)
 
 | Skill | Questions /7 | Plan /9 | Total /16 |
 |---|---|---|---|
-| **road-trip-planner** | **7** | 7.5 | **14.5** |
-| no skill | 6.5 | 7 | 13.5 |
-| itinerary-optimizer | 6 | 7 | 13 |
-| road-trip-planner (earlier version) | 4.5 | 7 | 11.5 |
-| travel-agent | 5 | 6.5 | 11.5 |
-| plan-tour-route | 3.5 | **8** | 11.5 |
+| **road-trip-planner** | **7** | **7.5** | **14.5** |
+| no skill | 6.5 | **7.5** | 14 |
+| itinerary-optimizer | 6 | **7.5** | 13.5 |
+| road-trip-planner (earlier version) | 4.5 | **7.5** | 12 |
+| travel-agent | 5 | 7 | 12 |
 | trip-planner | 4 | 7 | 11 |
+| plan-tour-route | 3.5 | **7.5** | 11 |
 
-The grader said it would hand the traveller itinerary-optimizer's plan: it stays within every limit, gets two IHG nights, ends in Adelaide with an hour's buffer, and fits on a phone. road-trip-planner was the only plan to catch the new Twelve Apostles parking booking, but it ended the trip in Meningie instead of Adelaide.
+The grader would hand the traveller the road-trip-planner plan: the shortest, two IHG nights within every limit, and the only one to catch the new Twelve Apostles booking, with real links and book-by dates. Before sending it, the grader would add the second driver to the rental, warn about fuel on Christmas Day and drop a beach that is closed.
 
 ### Combined
 
 | Skill | Total /32 | Plan only /18 |
 |---|---|---|
-| **road-trip-planner** | **30** | **16** |
-| no skill | 27.5 | 15.5 |
-| itinerary-optimizer | 25 | 14.5 |
-| road-trip-planner (earlier version) | 24.5 | 15.5 |
-| travel-agent | 24 | 15 |
-| plan-tour-route | 23 | **16** |
-| trip-planner | 22.5 | 15 |
+| **road-trip-planner** | **30.5** | **16.5** |
+| no skill | 28 | 16 |
+| itinerary-optimizer | 26 | 15 |
+| road-trip-planner (earlier version) | 25.5 | 16 |
+| travel-agent | 24.5 | 15 |
+| plan-tour-route | 22.5 | 15.5 |
+| trip-planner | 22.5 | 14.5 |
 
-### Weaknesses the graders found in road-trip-planner
+### Weaknesses the graders still found in road-trip-planner
 
-- **Round 1:** four non-Accor hotels left as "to choose", a 14-page PDF with a lot of white space, and the Mount John summit scheduled before its road opens (marked unverified in the plan).
+- **Round 1:** about 200 km of backtracking for a fifth Accor night, and a booking table that repeats the same note on every hotel row.
 - **Round 2:**
-  - The last night was in Meningie, which gave up an available IHG night in Adelaide.
-  - It stated wrongly that only Geelong has IHG on the route.
-  - It put 195 km of driving on the day of the flight.
-  - "5 of 8 requirements met" was confusing.
+  - The rental item doesn't say to add the second driver.
+  - Christmas Day fuel isn't tied to closures.
+  - The non-IHG nights aren't explained.
+  - It chose an IHG hotel 15 km north of the city without checking the city one fits three.
+  - The overview lines had no labels. This has been fixed since: phone lines now read "78 km · Driving 1 h 07 · Sunset 20:45".
 
 ### Cost (both phases)
 
 | Skill | Minutes, round 1 / round 2 | Subagent tokens, round 1 / round 2 |
 |---|---|---|
-| road-trip-planner | 19.7 / 13.6 | 257k / 224k |
+| road-trip-planner | 30.4 / 15.8 | 339k / 256k |
 | road-trip-planner (earlier version) | 15.2 / 8.7 | 238k / 181k |
 | travel-agent | 18.9 / 9.0 | 305k / 182k |
 | plan-tour-route | 20.8 / 14.2 | 232k / 170k |
@@ -79,14 +80,28 @@ The grader said it would hand the traveller itinerary-optimizer's plan: it stays
 | itinerary-optimizer | 11.5 / 5.1 | 180k / 130k |
 | no skill | 13.0 / 7.4 | 192k / 147k |
 
-road-trip-planner is among the slowest and most expensive runs. Its intake has more questions, and it runs scripts.
+road-trip-planner is the slowest and most expensive run. Its intake has more questions, it runs scripts, and it now researches every night's lodging.
+
+## How this version was reached
+
+- **1.0.0 runs** scored 15.5 (round 1) and 14.5 (round 2), the highest totals. But both graders would have handed the traveller a different plan. They found:
+  - hotels left as "to choose";
+  - a 14-page PDF with a lot of white space;
+  - a sight scheduled before its road opened;
+  - a last night that gave up an available IHG hotel in the end city;
+  - a wrong claim about which towns have IHG;
+  - 195 km of driving on the flight day;
+  - a confusing "5 of 8 requirements met".
+- **1.1.0** fixes each of these (see `CHANGELOG.md`). Then both road-trip-planner runs were repeated, and all seven submissions in each round were graded again from scratch. The tables above are from that second grading.
+- **Language question.** Before 1.0.0 was graded, its first round-1 run offered a language the traveller had never used. The intake was changed so the options only offer the traveller's own language plus "Other", and that run was repeated.
 
 ## Caveats
 
+- **Tuned on the test.** The 1.1.0 fixes target weaknesses found on these two tasks. Improvement on the same tasks overstates how much it would help on a new trip.
 - **The rubric was written by the skill's author.** 7 of its 16 items grade the questions, which is where this skill was built to be strong. Read the plan-only column for a fairer view of plan quality.
-- **One run per skill per round.** Differences of 1–2 points could be noise.
-- **road-trip-planner was run twice.** In its first round-1 run, the language question listed a second language the traveller had never used. The intake was changed so the options only offer the traveller's own language, plus "Other". Both road-trip-planner runs were then repeated with this release, and only those runs were graded. The other skills were run once. A grading of round 2 that had started before the repeat was stopped and discarded.
-- **Some runs couldn't write their report file.** In round 2, six runs had their write of `report.md` refused by the tool. They returned the report as text, which was saved unchanged. One submission's template heading was replaced with "Trip plan" before grading so it couldn't be identified, in round 1 (covered on the first PDF page) and round 2. PDF metadata was cleared in the blind copies.
+- **Grading noise.** Between the two gradings, the six submissions that didn't change moved by up to 1 point. Differences of 1 point or less are noise.
+- **One run per skill.** Each other skill was run once per round. The road-trip-planner runs in the tables are its third attempt in each round.
+- **Some runs couldn't write their report file.** In round 2, six runs had their write of `report.md` refused by the tool. They returned the report as text, which was saved unchanged. One submission's template heading was replaced with "Trip plan" before grading so it couldn't be identified: in round 1 it was covered on the first PDF page, and in round 2 replaced in the text. PDF metadata was cleared in the blind copies.
 - **Several runs reached their web-search limit** partway through, and marked the facts they couldn't check.
 - **The task's facts were current in November 2026.** Opening hours, road status and booking rules will change.
 
