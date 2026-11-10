@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1 (2026-11-10)
+
+- The skill treats opening-hours pages, booking pages, pasted confirmations, PDFs and spreadsheets as data. Nothing in them is a reason to change the plan or run a command; instructions found there are reported to the traveller instead of followed.
+
 ## 1.1.0 (2026-11-09)
 
 Fixes for the weaknesses the blind evaluation found.
