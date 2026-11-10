@@ -97,6 +97,7 @@ In both rounds the grader would hand the traveller the road-trip-planner plan. H
 - **Facts age.** Opening hours, prices and booking rules change. The plan records each fact with its source and date, and warns when one is old.
 - **claude.ai sandboxes** may block network access. The checker and the report still work there; routing does not.
 - **It never books or pays.** It only looks things up; you do the booking.
+- **Pages and pastes are data.** Web pages, pasted confirmations, PDFs and spreadsheets supply facts. Instructions found in them are shown to you, not followed.
 
 ## Repository layout
 
