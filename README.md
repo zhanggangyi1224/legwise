@@ -8,6 +8,8 @@ Legwise is a Claude Code plugin that packages `road-trip-planner`, a Claude skil
 
 See [`examples/report-phone.md`](examples/report-phone.md) for a finished report, and [`evaluation/REPORT.md`](evaluation/REPORT.md) for how it compares with other travel skills.
 
+Listed in the [Build with Claude](https://www.buildwithclaude.com) plugin marketplace, and in Chat2AnyLLM's [awesome-repo-configs](https://github.com/Chat2AnyLLM/awesome-repo-configs), which feeds its awesome-claude-plugins and awesome-claude-skills catalogs.
+
 ## What it does
 
 - **Speaks your language.** It replies in the language you write in and writes the report in the language you pick.
@@ -42,6 +44,15 @@ With older versions:
 /plugin marketplace add zhanggangyi1224/legwise
 /plugin install legwise@legwise
 ```
+
+Or from the [Build with Claude](https://github.com/davepoon/buildwithclaude) marketplace, if you already use it:
+
+```
+/plugin marketplace add davepoon/buildwithclaude
+/plugin install legwise@buildwithclaude
+```
+
+That marketplace is pinned to a release, so it can be a version behind this repository.
 
 **Option 2: the [skills CLI](https://github.com/vercel-labs/skills)**, for Claude Code or other agents (Codex, Cursor and more):
 
